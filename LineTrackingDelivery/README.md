@@ -10,6 +10,10 @@ SmartBot Operations- Robot is able to automatically detect which side of the lin
   delivered, the robot flashes "Delivery Successful" on the screen 1 second on, 1 second off for three times.
 * In the physical twin only, robot is able to automatically detect which side of the line it is placed on before line tracking the line on that randomly placed side
 
+## Demo
+
+https://user-images.githubusercontent.com/73859429/163321718-663dcec8-0366-406c-969b-eafe7910aea7.mp4
+
 ## What can't this robot do?
 * This robot was unable to detect the red line using getColorRGB
     * For some reason, the green value constantly maintains a high value, while the red and blue stagnates
