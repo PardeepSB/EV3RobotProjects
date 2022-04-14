@@ -23,7 +23,7 @@
 
 ## Demo
 
-https://user-images.githubusercontent.com/73859429/163318988-2c7354e0-51ca-4880-81d2-da37c2d6dbe2.mov
+https://user-images.githubusercontent.com/73859429/163320404-83a2fe89-c985-4a15-9952-bf1d8692d689.mp4
 
 ## What can't this robot do?
 * Currently, this robot is unable to drive at a fast speed due to overshooting
