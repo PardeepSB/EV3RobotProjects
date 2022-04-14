@@ -21,6 +21,9 @@
 
 * Displays the robot's current position within the LCD screen as the physical robot is moving
 
+## Demo
+
+https://user-images.githubusercontent.com/73859429/163318988-2c7354e0-51ca-4880-81d2-da37c2d6dbe2.mov
 
 ## What can't this robot do?
 * Currently, this robot is unable to drive at a fast speed due to overshooting
