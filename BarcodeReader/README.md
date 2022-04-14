@@ -5,9 +5,6 @@
   Then a csv file can be saved onto the computer, and MATLAB code can decode the barcode using the
   relative widths of the black bar to the white space.
 
-* There is also a real-time robotC code that can directly read the barcode value as it runs, and displays it onto
-  the LCD (No MATLAB required).
-
 * Sensor can also read coloured barcodes as long as the colors are not too similar.
 
   ~Physical Robot
@@ -16,11 +13,29 @@
   - Can read a paper sized barcode at varying speeds (5 percent speed is primarily used)
   - Stops after the last bar read
 
+  Physical Robot Barcode Reader:
+
+  https://user-images.githubusercontent.com/73859429/163313001-b605089e-6944-4c18-a28f-90dbf56e3b2f.mp4  
+  
+  
   ~Virtual Robot
   - Can distinguish between noissy black and white lines of the barcode
   - The virtual robot has a more ideal output for the color values as it's in an ideal environment
   - Returns consistent color sensor values
   - Stops after the last bar is read
+  
+  Virtual Robot Barcode Reader:
+
+  https://user-images.githubusercontent.com/73859429/163313174-a2e34825-d7c3-4b75-bcb3-a7cacc10960a.mp4
+
+
+* There is also a real-time robotC code that can directly read the barcode value as it runs, and displays it onto
+  the LCD (No MATLAB required).
+  
+<p align="center">
+	<img src="https://user-images.githubusercontent.com/73859429/163313434-fb8578a0-bc70-4f5b-8849-1df1c6285a07.mp4"> 
+</p>
+
 
 ## What can't the robot do?
   
@@ -53,14 +68,14 @@
 
 
 ## MATLAB barcode decoder:
-  1. Reads from csv file using the csvread function
-  2. Converts the continous light sensor readings into binary 0s and 1s using a adjustable threshold value
-     (black is 0, white is 1)
-  3. Measures the length of the first black bar by counting the number of 0s until it hits a 1.
-     Then measures the length of the white space, and alternates until it read 4 black bars and 4 white spaces.
-  4. Calculates the ratio of black to white by dividing the black by black + white. Repeats 4 times.
-  5. If the ratio is < 0.5, the digit is 1, otherwise it is 0.
-  6. Converts binary to decimal, and display the answer.
+    1. Reads from csv file using the csvread function
+    2. Converts the continous light sensor readings into binary 0s and 1s using a adjustable threshold value
+       (black is 0, white is 1)
+    3. Measures the length of the first black bar by counting the number of 0s until it hits a 1.
+       Then measures the length of the white space, and alternates until it read 4 black bars and 4 white spaces.
+    4. Calculates the ratio of black to white by dividing the black by black + white. Repeats 4 times.
+    5. If the ratio is < 0.5, the digit is 1, otherwise it is 0.
+    6. Converts binary to decimal, and display the answer.
    
 ## MATLAB barcode decoder notes:
   * The barcode decoder works by comparing the relative widths of each segment, therefore it should work
@@ -71,14 +86,14 @@
 
 
 ## MATLAB barcode generator:
-1. Prompts the user to enter a value between 0 and 15 (including)
-2. Converts the input to binary, then flips it
-3. Splits the 1080 x 1920 image into 4 segments, each 480 pixels wide. This will be the edge of each
-   segment. For each edge, if the next input is 1, it makes the next 360 pixel columns black (thick bar).
-   Otherwise, it makes the next 120 pixels black (thin bar).
-4. Adds noise to the image by adding a random value to each pixel (it also slightly compresses the image
-   and shifts it up a little bit so that noise can go above and below for both black and white areas).
-5. Creates the png image using the imwrite function
+    1. Prompts the user to enter a value between 0 and 15 (including)
+    2. Converts the input to binary, then flips it
+    3. Splits the 1080 x 1920 image into 4 segments, each 480 pixels wide. This will be the edge of each
+       segment. For each edge, if the next input is 1, it makes the next 360 pixel columns black (thick bar).
+       Otherwise, it makes the next 120 pixels black (thin bar).
+    4. Adds noise to the image by adding a random value to each pixel (it also slightly compresses the image
+       and shifts it up a little bit so that noise can go above and below for both black and white areas).
+    5. Creates the png image using the imwrite function
 
 ### Aditional Notes:
   - If the user inputs a non-integer value, it will just ignore the decimal place (round down).
