@@ -34,10 +34,6 @@
   
   https://user-images.githubusercontent.com/73859429/163313434-fb8578a0-bc70-4f5b-8849-1df1c6285a07.mp4
 
-<p align="center">
-  <embed src="https://user-images.githubusercontent.com/73859429/163313434-fb8578a0-bc70-4f5b-8849-1df1c6285a07.mp4">
-</p>
-
 ## What can't the robot do?
   
   ~Physical Robot
