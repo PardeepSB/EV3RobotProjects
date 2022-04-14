@@ -32,7 +32,7 @@
 * There is also a real-time robotC code that can directly read the barcode value as it runs, and displays it onto
   the LCD (No MATLAB required).
   
-  https://user-images.githubusercontent.com/73859429/163313434-fb8578a0-bc70-4f5b-8849-1df1c6285a07.mp4
+  https://user-images.githubusercontent.com/73859429/163320949-0ee09e56-ac51-43a6-be00-812653ac3d03.mp4 
 
 ## What can't the robot do?
   
